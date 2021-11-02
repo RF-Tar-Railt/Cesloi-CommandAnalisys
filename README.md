@@ -1,5 +1,8 @@
 # Cesloi-CommandAnalisys
 一个简易、实用的命令/命令参数解析器
+
+ **该程序不局限于只在Cesloi项目内使用**
+ 
 ## 样例展示
 ```python
 >>> from command import *
