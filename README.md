@@ -7,17 +7,17 @@
 ```python
 >>> from command import *
 >>> v = Command(headers=[""], main=["img", [["download", ["-p", AnyStr]], ["upload", [["-u", AnyStr], ["-f", AnyStr]]]]])
->>> CommandHandle.analysis_command(v, "img upload -u http://www.baidu.com")
+>>> v.analysis("img upload -u http://www.baidu.com")
 http://www.baidu.com
->>> CommandHandle.analysis_command(v, "img upload -f img.png")
+>>> v.analysis("img upload -f img.png")
 img.png
 >>> v = Command(headers=["bot"], main=["get"])
->>> print(CommandHandle.analysis_command(v, "bot get")
+>>> print(v.analysis("bot get")
 True
 >>> v = Command(headers=["bots", "bot"])
->>> CommandHandle.analysis_command(v, "bot")
+>>> v.analysis("bot")
 True
->>> CommandHandle.analysis_command(v, "sbot")
+>>> v.analysis("sbot")
 False
 
 ```
